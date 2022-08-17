@@ -1,0 +1,123 @@
+﻿using System;
+using System.Collections.Generic;
+
+#nullable disable
+
+namespace TCC_WebAPI.Models
+{
+    public partial class TccPaymentProcess
+    {
+        public int Id { get; set; }
+        public DateTime? RequestDate { get; set; }
+        public DateTime? ProcessFinishDate { get; set; }
+        public string ProcessName { get; set; }
+        public int? Incident { get; set; }
+        public int? ProcessStatus { get; set; }
+        public string RequestLoginName { get; set; }
+        public string RequestRealName { get; set; }
+        public string RequestSfzh { get; set; }
+        public string RequestDeptCode { get; set; }
+        public string RequestDeptName { get; set; }
+        public DateTime? RequestDate1 { get; set; }
+        public string RequestFormNumber { get; set; }
+        public int? RequestType { get; set; }
+        public string RequestTypeName { get; set; }
+        public int? RequestPayCategory { get; set; }
+        public string RequestPayCategoryName { get; set; }
+        public string ProjectCode { get; set; }
+        public string ProjectName { get; set; }
+        public int? ProjectType { get; set; }
+        public string ProjectCategory { get; set; }
+        public string ProjectTypeName { get; set; }
+        public decimal? ProjectContractAmount { get; set; }
+        public decimal? ProjectReceivedAmount { get; set; }
+        public decimal? ProjectReceivedPercentage { get; set; }
+        public decimal? ProjectPaymentContractTotalAmount { get; set; }
+        public decimal? ProjectPaymentAmount { get; set; }
+        public decimal? ProjectAccountPayable { get; set; }
+        public decimal? ProjectPojectProgressPercentage { get; set; }
+        public decimal? ProjectProfitMargin { get; set; }
+        public string ContractCode { get; set; }
+        public string ContractName { get; set; }
+        public string ContractForm { get; set; }
+        public string ContractCategory { get; set; }
+        public string ContractUnitName { get; set; }
+        public string ContractUnitCode { get; set; }
+        public string ContractCurrencyType { get; set; }
+        public decimal? ContractAmountContract { get; set; }
+        public decimal? ContractAmountChange { get; set; }
+        public decimal? ContractAmountTotal { get; set; }
+        public decimal? ContractAmountTotalPayment { get; set; }
+        public decimal? ContractAmountTotalPaymentPercentage { get; set; }
+        public decimal? ContractAmountTotalTimePayment { get; set; }
+        public decimal? ContractAmountTotalTimePaymentPercentage { get; set; }
+        public int? PaymentNode { get; set; }
+        public string PaymentNodeName { get; set; }
+        public string PaymentDescription { get; set; }
+        public int? PaymentMethod { get; set; }
+        public string PaymentMethodName { get; set; }
+        public string PaymentReceiptCode { get; set; }
+        public string PaymentCommercialInvoiceCode { get; set; }
+        public decimal? PaymentAmountLowercase { get; set; }
+        public string PaymentAmountUppercase { get; set; }
+        public string PaymentCurrency { get; set; }
+        public string PaymentReceivingCompanyCode { get; set; }
+        public string PaymentReceivingCompanyName { get; set; }
+        public string PaymentReceivingCompanyAddress { get; set; }
+        public string PaymentBankAccount { get; set; }
+        public DateTime? PaymentContractPaymentDate { get; set; }
+        public string PaymentBankName { get; set; }
+        public string PaymentLineNumbers { get; set; }
+        public decimal? PaymentCreditAmount { get; set; }
+        public string PaymentBankTemplate { get; set; }
+        public decimal? PaymentAmount { get; set; }
+        public decimal? FinanceDraftTotal { get; set; }
+        public string FinanceDraftMode { get; set; }
+        public decimal? FinanceDraftEnabledAmount { get; set; }
+        public decimal? FinanceDraftSurplusAmount { get; set; }
+        public decimal? FinancePaymentTotal { get; set; }
+        public decimal? FinanceDraftAmount { get; set; }
+        public decimal? FinancePaymentAmount { get; set; }
+        public string FinanceEntrySubject { get; set; }
+        public string FinanceEntrySubjectName { get; set; }
+        public string ProjectManager { get; set; }
+        public string ProjectManagerLoginName { get; set; }
+        public string ProjectManagerIdentityId { get; set; }
+        public int? IsLock { get; set; }
+        public string LockLoginUserName { get; set; }
+        public string LockUserName { get; set; }
+        public string CasierClaimUserName { get; set; }
+        public string CasierClaimLoginUserName { get; set; }
+        public string AccountingAuditUserName { get; set; }
+        public string AccountingAuditLoginUserName { get; set; }
+        public string FinancePaymentBank { get; set; }
+        public string FinancePaymentBankAccount { get; set; }
+        public string FinanceCheckBank { get; set; }
+        public string FinanceCheckBankAccount { get; set; }
+        public string FinancePaymentSubjectCode { get; set; }
+        public string FinancePaymentSubjectName { get; set; }
+        public string FinanceCheckSubjectCode { get; set; }
+        public string FinanceCheckSubjectName { get; set; }
+        public DateTime? AccountingAuditDate { get; set; }
+        public int? Voucherid { get; set; }
+        public string PaymentSwiftCode { get; set; }
+        public string PaymentIbanCode { get; set; }
+        public string PaymentAbacode { get; set; }
+        public string PaymentGuanDanCode { get; set; }
+        public string PaymentGuanDanGoodsName { get; set; }
+        public string PaymentGuanDanCurrency { get; set; }
+        public string PaymentGuanDanTotal { get; set; }
+        public string PaymentTransportationMode { get; set; }
+        public string PaymentTransportationModeName { get; set; }
+        public string VoucherCode { get; set; }
+        public decimal? Exchange { get; set; }
+        public decimal? ChangeLocalCurrencyAmount { get; set; }
+        public int? PaymentFundMode { get; set; }
+        public string PaymentFundModeName { get; set; }
+        public string Approver1 { get; set; }
+        public string Approver1LoginName { get; set; }
+        public string Approver2 { get; set; }
+        public string Approver2LoginName { get; set; }
+        public int? Attachment { get; set; }
+    }
+}

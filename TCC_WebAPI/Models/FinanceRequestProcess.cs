@@ -1,0 +1,123 @@
+﻿using System;
+using System.Collections.Generic;
+
+#nullable disable
+
+namespace TCC_WebAPI.Models
+{
+    public partial class FinanceRequestProcess
+    {
+        public string Id { get; set; }
+        public string ProcessName { get; set; }
+        public int Incident { get; set; }
+        public int ProcessStatus { get; set; }
+        public string RequestLoginName { get; set; }
+        public string RequestRealName { get; set; }
+        public string RequestUserIdentity { get; set; }
+        public string RequestDeptCode { get; set; }
+        public string RequestDeptName { get; set; }
+        public DateTime RequestDate { get; set; }
+        public string RequestFormNumber { get; set; }
+        public int RequestType { get; set; }
+        public int RequestPayCategory { get; set; }
+        public string ProjectCode { get; set; }
+        public string ProjectName { get; set; }
+        public decimal ProjectContractAmount { get; set; }
+        public decimal ProjectReceivedAmount { get; set; }
+        public string ProjectReceivedPct { get; set; }
+        public string ProjectCompletePct { get; set; }
+        public string ProjectCategory { get; set; }
+        public string ProjectCategorySub { get; set; }
+        public decimal ReceiptAmount { get; set; }
+        public decimal BillAmount { get; set; }
+        public int PostalBillGetMethod { get; set; }
+        public DateTime? PlanInAcctDate { get; set; }
+        public string PayCmpName { get; set; }
+        public string PayCmpAddress { get; set; }
+        public string PayCmpBank { get; set; }
+        public string PayCmpBankAcct { get; set; }
+        public string PayCmpBankUnionAcct { get; set; }
+        public int? ConfimStatus { get; set; }
+        public DateTime? ProcessFinishDate { get; set; }
+        public int? Location { get; set; }
+        public int? BusinessObject { get; set; }
+        public string PayCmpCode { get; set; }
+        public string IncidentStr { get; set; }
+        public string Telphone { get; set; }
+        public decimal? SumReceiveAmountSmall { get; set; }
+        public string SumReceiveAmountBig { get; set; }
+        public string Rceiptor { get; set; }
+        public string BillNumber { get; set; }
+        public int? BillNum { get; set; }
+        public string InvoiceNumber { get; set; }
+        public string TaxRate { get; set; }
+        public int? Voucherid { get; set; }
+        public string FinanceProName { get; set; }
+        public string FinanceProLoginName { get; set; }
+        public DateTime? FinanceProDate { get; set; }
+        public string TaxRateValue { get; set; }
+        public string Tariff { get; set; }
+        public string PayCmpPhone { get; set; }
+        public string AuditBusinessName { get; set; }
+        public string AuditBusinessLoginName { get; set; }
+        public int? FinanceStatus { get; set; }
+        public decimal? StandardCurrencyMoneyRate { get; set; }
+        public decimal? StandardCurrencyMoney { get; set; }
+        public string StandardCurrency { get; set; }
+        public decimal? MoneyTotal { get; set; }
+        public decimal? Rate { get; set; }
+        public decimal? MoneyRmb { get; set; }
+        public string BillContent { get; set; }
+        public string NotesRemark { get; set; }
+        public decimal? SubMoneyOnVat { get; set; }
+        public decimal? DesignOfIncome { get; set; }
+        public int? BillTypeValue { get; set; }
+        public string PaymentInstructions { get; set; }
+        public int? PaymentTypeValue { get; set; }
+        public decimal? SumDue { get; set; }
+        public string OfferInvoiceDate { get; set; }
+        public string PayBankCode { get; set; }
+        public string PayBankName { get; set; }
+        public string PayCheque { get; set; }
+        public int? Insideandoutside { get; set; }
+        public string FpRceiptor { get; set; }
+        public int? IsRz { get; set; }
+        public string AccountPayCmpCode { get; set; }
+        public string AccountPayCmpName { get; set; }
+        public string AccountReceiveCmpCode { get; set; }
+        public string AccountReceiveCmpName { get; set; }
+        public decimal? DonateDk { get; set; }
+        public decimal? DonateAmount { get; set; }
+        public string DonateBill { get; set; }
+        public DateTime? BatchBillDate { get; set; }
+        public int? PayInfoId { get; set; }
+        public int? IdentifySource { get; set; }
+        public string TheApplyCurcency { get; set; }
+        public string TheApplyCurcencyName { get; set; }
+        public decimal? TheApplyRate { get; set; }
+        public decimal? TheRate { get; set; }
+        public decimal? TheApplyReceivedAmount { get; set; }
+        public int? TheAppleCurOperate { get; set; }
+        public string ProjectJnw { get; set; }
+        public string WaElecInvoiceNumber { get; set; }
+        public string BillCategoryName { get; set; }
+        public int? BillCategory { get; set; }
+        public string SourceFormNumber { get; set; }
+        public string ContractType { get; set; }
+        public string ContCode { get; set; }
+        public string ContName { get; set; }
+        public decimal? ContractAmt { get; set; }
+        public string ContCurrency { get; set; }
+        public string AppointGrtLetter { get; set; }
+        public string GrtLtType { get; set; }
+        public int? DfconfimStatus { get; set; }
+        public string IncometypeText { get; set; }
+        public int? IncometypeValue { get; set; }
+        public string DigestDescribition { get; set; }
+        public string ExchangeNote { get; set; }
+        public int? Opentions { get; set; }
+        public int? IsWhExchange { get; set; }
+        public int? ReportId { get; set; }
+        public int? IsReturned { get; set; }
+    }
+}

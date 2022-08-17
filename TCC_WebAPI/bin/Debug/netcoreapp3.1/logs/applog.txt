@@ -1,0 +1,4 @@
+2021-11-12 11:17:10,124 [4] INFO  InfoLogger [(null)] - GetCollectionInfoByPro-B11005
+2021-11-12 11:17:38,118 [12] INFO  InfoLogger [(null)] - GetCollectionInfoByPro-B11005
+2021-11-12 11:22:37,951 [12] INFO  InfoLogger [(null)] - GetCollectionInfoByPro-B11005
+2021-11-12 11:27:16,313 [12] INFO  InfoLogger [(null)] - GetCollectionInfoByPro-B11005

@@ -1,0 +1,1 @@
+﻿Scaffold-DbContext "Server=UltimusDB;Database=TCC_BusinessDB;Uid=sa;Pwd=UltimusDB;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir entity -Tables Landray_BudgetHistory

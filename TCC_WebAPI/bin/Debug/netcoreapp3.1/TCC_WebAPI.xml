@@ -1,0 +1,442 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TCC_WebAPI</name>
+    </assembly>
+    <members>
+        <member name="M:TCC_WebAPI.App_Code.PaymentPublicHelper.GetBKHistory(System.String)">
+            <summary>
+            已拨款额
+            </summary>
+            <param name="ProjectCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCC_WebAPI.App_Code.PaymentPublicHelper.GetBKApply(System.String,System.Int32)">
+            <summary>
+            已申请额
+            </summary>
+            <param name="ProjectCode"></param>
+            <param name="incident"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCC_WebAPI.App_Code.PaymentPublicHelper.GetProjectIsEPC(System.String)">
+            <summary>
+            判断是不是epc项目
+            </summary>
+            <param name="ProjectCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TCC_WebAPI.App_Code.PaymentPublicHelper.GetProjectSingleBudget(System.String,TCC_WebAPI.App_Code.PaymentPublicHelper.enumBudgetName_EPC)">
+            <summary>
+            获取项目相关类型
+            </summary>
+            <param name="projectCode">项目号</param>
+            <param name="BudgetName_EPC">预算值</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.BillManageController.CreateKBillInfo(System.Collections.Generic.List{TCC_CoreApi.Model.entity.LandrayBillsManagement},System.String)">
+            <summary>
+            汇入票据台账
+            </summary>
+            <param name="items">发票明细（包含部分业务信息）</param>
+            <param name="fd_exitsid">fd_id 用于筛选 删除已存在fd_id 的票据信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.BillManageController.ModefiedKBillInfo(System.Collections.Generic.List{TCC_CoreApi.Model.entity.LandrayBillsManagement})">
+            <summary>
+            票据台账修改信息
+            </summary>
+            <param name="items">修改票据台账(Flag 0:流程中,1:已完成 ,2:已撤销)</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.BorrowMoneyInfoController.Create(System.Collections.Generic.List{TCC_CoreApi.Model.entity.LandrayBorrowMoneyInfo})">
+            <summary>
+            一般费用报销备用金和周转金（接单选择冲抵单据）接口	（新建）
+            </summary>
+            <returns>新建结果返回</returns> 
+            <response code="201">返回字符串</response>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.BorrowMoneyInfoController.Updadte(System.String,System.Collections.Generic.List{TCC_CoreApi.Model.entity.LandrayBorrowMoneyInfo})">
+            <summary>
+            一般费用报销备用金和周转金（接单选择冲抵单据）接口	（更新）
+            </summary>
+            <param name="LandrayFormCode">蓝凌唯一标识</param>
+            <returns>查询结果返回</returns> 
+            <response code="201">返回字符串</response>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.BorrowMoneyInfoController.QueryInfoByID(System.String,System.String,System.String)">
+            <summary>
+            一般费用报销获取安马明细表数据（view_HasHappened_BorrowMoneyInfo）
+            </summary>
+            <returns>查询结果返回</returns> 
+            <response code="201">返回字符串</response>
+            <summary>
+            一般费用报销备用金和周转金（提单获取余额）接口（主表）
+            </summary>
+            <param name="UserIdentity">身份证号</param>
+            <param name="Currency">币种</param>
+            <param name="ProjectCode">项目号</param>
+            <returns>查询结果返回</returns> 
+            <response code="201">返回字符串</response>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.BorrowMoneyInfoController.QueryInfoByID2(System.String,System.String,System.String,System.String)">
+            <summary>
+            一般费用报销备用金和周转金（提单获取余额）接口（财务）
+            </summary>
+            <param name="UserIdentity">身份证号</param>
+            <param name="Currency">币种</param>
+            <param name="ProjectCode">项目号</param>
+            <param name="Incident">fd_id</param>
+            <returns>查询结果返回</returns> 
+            <response code="201">返回字符串</response>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.BudgetInfoController.GetDeptBudgetInfoByDeptCode(System.Int32,System.String,System.String)">
+            <summary>
+            部门预算查询
+            </summary>
+            <param name="Year">年度</param>
+            <param name="DeptCode">部门</param>
+            <param name="ItmeCode">预算科目码(非必填)</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.BudgetInfoController.ModefiedBudHistory(System.Collections.Generic.List{TCC_CoreApi.Model.entity.LandrayBudgetHistory})">
+            <summary>
+            部门预算信息新增、修改
+            </summary>
+            <param name="items">预算明细(Flag 0:流程中,1:已完成 ,2:已撤销)</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.BudgetInfoController.GetProBudgetInfoByProjectCode(System.String,System.Int32)">
+             <summary>
+             项目预算查询
+             </summary>
+             <param name="ProjectCode">项目号</param>
+             <param name="RunningCost">项目预算分类</param>
+             <returns></returns>
+            <response code="201">返回字符串（ProjectCode:项目号,ProjectName:项目名称,proj_type_desc:项目类型,HappenedAmount:已发生金额,HappeningAmount:流程中金额）</response>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.BudgetInfoController.GetProBudgetInfoByProjectList(System.String,System.Int32)">
+             <summary>
+             多项目预算查询
+             </summary>
+             <param name="ProjectList">项目号</param>
+             <param name="RunningCost">项目预算分类</param>
+             <returns></returns>
+            <response code="201">返回字符串（ProjectCode:项目号,HappenedAmount:已发生金额,HappeningAmount:流程中金额,remainAmount:剩余金额,RunningCost:项目预算分类）</response>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.CashierPoolController.CPInboxForCreate(System.Collections.Generic.List{TCC_CoreApi.Model.entity.LandrayFinanceCashierConfirm})">
+            <summary>
+            出纳池子新增待办
+            </summary>
+            <param name="items">新增待办明细</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.CashierPoolController.CPInboxForModefied(System.Collections.Generic.List{TCC_CoreApi.Model.entity.LandrayFinanceCashierConfirm})">
+            <summary>
+            出纳池子修改待办（变为已办）
+            </summary>
+            <param name="items">修改明细(IsVoucher:是否入账 ；ConfirmPayment：是否确认)</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.CollectionInvoicingInfoController.GetCollectionInfoByPro(System.String)">
+            <summary>
+            已收费额、已收费比例 查询
+            </summary>
+            <param name="ProjectCode">项目号</param>
+            <returns>查询结果返回</returns> 
+            <response code="201">返回字符串（proid:项目号,project_name:项目名称,Total:项目合同总额,RAmount_CNY:已收费额,RPer_CNY:已收费比例（%））</response>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.CollectionInvoicingInfoController.GetReBillAmountInfo(System.String,System.String,System.String)">
+            <summary>
+            合同累计开票额(包含正在进行中的数据)
+            </summary>
+            <param name="ProjectCode">项目号</param>
+            <param name="OwnerCode">业主编号</param>
+            <param name="fd_id">项目号</param>
+            <returns>查询结果返回</returns> 
+            <response code="201">返回字符串（BillAmount:合同累计开票额(包含正在进行中的数据)）</response>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.CollectionInvoicingInfoController.GetInvcoingByPro(System.String,System.String)">
+            <summary>
+            已开票金额 查询
+            </summary>
+            <param name="ProjectCode">项目号</param>
+            <param name="OwnerCode">业主编号</param>
+            <returns>查询结果返回</returns> 
+            <response code="201">返回字符串（ProjectCode:项目号,OwnerCode:业主编号,RenInvoicesAmount:已开票金额）</response>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.CollectionInvoicingInfoController.GetInvcoingHistory(System.String,System.String)">
+            <summary>
+            历史开票信息查询
+            </summary>
+            <param name="ProjectCode">项目号</param>
+            <param name="OwnerCode">业主编号</param>
+            <returns>查询结果返回</returns> 
+            <response code="201">RenInvoiceDate:开票时间,RequestRealName:申请人,RecAmount:收款金额,RenInvoicesAmount:开出发票金额,taxrate:税率,EquipmentParagraph:设备材料采购款,ConstructionParagraph:施工工程款,DesignParagraph:设计款,ServicesParagraph:咨询及服务,RenBillsAmount:开出收据金额,PayBankAccount:付款单位帐号,PayCompanyName:付款单位名称,RecActualAmount:实收金额,
+            TransactorRealName:经办人,BillStatus:状态(0:未开；1:已开)</response>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.CollectionInvoicingInfoController.GetReceInfoByProandCate(System.String,System.String,System.String)">
+            <summary>
+            已收款金额、累计已开出发票金额、累计已开出收据金额
+            </summary>
+            <param name="ProjectCode">项目号</param>
+            <param name="OwnerCode">业主编号</param>
+            <param name="BillCategory">开票类型</param>
+            <returns>查询结果返回</returns> 
+            <response code="201">返回字符串（ProjectCode:项目号,ReceiveAmount:已收款金额,AggregateRenInvoiceAmount:累计已开出发票金额,AggregateRenReceiptAmount:累计已开出收据金额）</response>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.CollectionInvoicingInfoController.GetReceiptInfo(System.String,System.String,System.String,System.String)">
+            <summary>
+            预缴税选择收票信息
+            </summary>
+            <param name="ProjectCode">项目号</param>
+            <param name="RateCode">税率编号 9% 对应15</param>
+            <param name="searchKey">查询Value</param>
+            <param name="fd_id">主表ID</param>
+            <returns>查询结果返回</returns> 
+            <response code="201">Sprocessname:收票流程名称,Sincident:收票实例号,Incident:流程实例号,Sformnumber:表单号,BillCategoryValue：票据类型编号，BillCategoryText:票据类型名称,BillCode:发票编号,InvoiceDate:开票日期,BillAmount:票额,BillTaxAmount:税额,Amount:加税合计金额,TaxRateCode:税率编号,TaxRateText:税率名称,ContanctCode:合同号,SupplierCode:供应商编号,SupplierName:供应商名称,DeductibleAmount;抵扣金额,ReDeductibleAmount:剩余抵扣金额</response>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.CollectionInvoicingInfoController.GetWithholdingTaxHistory(System.String)">
+            <summary>
+            预缴税历史记录查询--用于测试，开票流程上线后需提供初始化记录
+            </summary>
+            <param name="ProjectCode">项目号</param>
+            <returns>查询结果返回</returns> 
+            <response code="201">ID:主键,ProcessName:流程名称,Incident:流程实例号,FormNumber:表单号,InvoiceTotalAmount:销售额,ApplyRateText预征率（%）,ApprovalDate:报税时间, AmountDeducted:扣除金额,DiffAdvanceTax:预征税基数,TaxationDate:报税所属时间,PreTax:预征税额</response>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.CollectionInvoicingInfoController.TaxForCreate(System.Collections.Generic.List{TCC_CoreApi.Model.entity.LandrayRenderedRecevelist})">
+            <summary>
+            新增预缴税记录
+            </summary>
+            <param name="items">预缴税明细</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.CollectionInvoicingInfoController.TaxForModefied(System.Collections.Generic.List{TCC_CoreApi.Model.entity.LandrayRenderedRecevelist})">
+            <summary>
+            修改预缴税记录
+            </summary>
+            <param name="items">修改预缴税明细(Flag 0:流程中,1:已完成 ,2:已撤销)</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.CollectionInvoicingInfoController.InstallmentsForCreate(System.String)">
+            <summary>
+            新增预缴税台账记录--最后一步执行
+            </summary>
+            <param name="fd_id">开出发票申请主表ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.CollectionInvoicingInfoController.IsExistRendered(System.String[],System.String,System.String)">
+            <summary>
+            验证开出发票票据编号是否存在
+            </summary>
+            <param name="BillCode">票号(数组)</param>
+            <param name="InvoiceCategoryText">票据类型(名称)</param>
+            <param name="fd_id">蓝领外键</param>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.DraftInfoController.GetDraftInfo(System.String,System.String,System.String,System.String)">
+            <summary>
+            汇票查询
+            </summary>
+            <param name="LoginName">用户名</param>
+            <param name="companyCode">收款单位编号</param>
+            <param name="signcode">合同签定单位编号</param>
+            <param name="drafttype">汇票种类</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.DraftInfoController.GetDraftAmount">
+            <summary>
+            汇票库存金额
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.IReceivedBillsController.IsExistReceived(System.String[],System.String)">
+            <summary>
+            验证收取发票票据编号是否存在
+            </summary>
+            <param name="BillsInfo">票号(数组 示例：["票号1^发票代码1^票据类型1","票号2^发票代码2^票据类型2"]) </param>
+            <param name="fd_id">蓝领外键</param>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.PaymentHelperController.GetCardholderByPro(System.String,System.String)">
+            <summary>
+             付款 周转金持卡人
+            </summary>
+            <param name="ProjectCode">项目号</param>
+            <param name="Currency">币种</param>
+            <returns>查询结果返回</returns> 
+            <response code="201">返回字符串（CardholdLogin:持卡人用户名,CardholdName:持卡人姓名,Balance:周转金余额)</response>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.PaymentHelperController.GetItineraryByPro(System.String,System.String,System.String)">
+            <summary>
+             付款 行程单
+            </summary>
+            <param name="jnw">境内外</param>
+            <param name="ProjectCode">项目号</param>
+            <param name="searchKey">查询条件(默认空，可选参数待定)</param>
+            <returns>查询结果返回</returns> 
+            <response code="201">返回字符串（PersonLogin:用户名,PersonRealName:姓名,UserIdentity:身份证号,BAFormNumber:出差单号,toplace:目的地,TravelDate:出差时间)</response>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.PaymentHelperController.GetCompanybkInfo(System.String,System.String)">
+            <summary>
+             分公司拨款--拨款限额、已拨款额、已申请额、成本扣除额、拨款余额 取值
+            </summary>
+            <param name="ProjectCode">项目号</param>
+            <param name="fd_id">蓝领外键（默认空）</param>
+            <returns>查询结果返回</returns> 
+            <response code="201">返回字符串（total:拨款限额,amount:已拨款额,apply:已申请额,cost:成本扣除额,balance:拨款余额)</response>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.PaymentHelperController.InsertPayHistory(System.Collections.Generic.List{TCC_CoreApi.Model.entity.LandrayPaymentHistory})">
+            <summary>
+            项目付款记录插入
+            </summary>
+            <param name="items">项目付款明细</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.PaymentHelperController.ModefiedPayHistory(System.Collections.Generic.List{TCC_CoreApi.Model.entity.LandrayPaymentHistory})">
+            <summary>
+            项目付款记录修改
+            </summary>
+            <param name="items">项目付款明细</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.PaymentHelperController.InsertPayNoHistory(System.Collections.Generic.List{TCC_CoreApi.Model.entity.LandrayPaymentHistoryNotProject})">
+            <summary>
+            非项目付款记录插入
+            </summary>
+            <param name="items">非项目付款明细</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.PaymentHelperController.ModefiedPayNoHistory(System.Collections.Generic.List{TCC_CoreApi.Model.entity.LandrayPaymentHistoryNotProject})">
+            <summary>
+            非项目付款记录修改
+            </summary>
+            <param name="items">非项目付款明细</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.PaymentHelperController.GetReturnDepoitInfo(System.String,System.String)">
+            <summary>
+             付款 行程单
+            </summary>
+            <param name="loginName">用户名</param>
+            <param name="searchKey">查询条件(默认空，可选参数待定)</param>
+            <returns>查询结果返回</returns> 
+            <response code="201">返回字符串（ContractCode:合同编号,ContractName:合同名称,DeptCode:部门编号,DeptName:部门名称,ProjectCode:项目编号,ProjectName:项目名称,ReceiveAmount:收款金额,WithholdingAmount:扣款金额,Exchange:汇率,ChangeLocalCurrencyAmount:折人民币金额,Currency:币种,ReceivedDate:收款日期,IncidentNo:流程实例号,ProcessName:流程名称,RequestType:申请类型编号(项目收款1, 其他收款2),RequestTypeName:申请类型名称(项目收款, 其他收款),RequestPayCategory:收款类型编号,RequestPayCategoryName:收款类型名称,RequestLoginName:申请人用户名,RequestRealName:申请人姓名,RequestDeptCode:申请人主管部门编号,RequestDeptName:申请人主管部门名称,RequestDate:申请日期,RequestFormNumber:申请表单号,PayCmpName:付款单位名称,PayCmpCode:付款单位编号,PayCmpAddress:付款单位地址,PayCmpBank:付款银行,PayCmpBankAcct:付款银行帐号,PayCmpBankUnionAcct:付款银行行号,BillCategory:押金/保证金类别编号,BillCategoryName:押金/保证金类别名称,GrtLtType:保函类别,ContCode:合同编号,cont_type:合同类别,htmc:合同名称,PaymentAmount:付款金额)</response>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.PaymentHelperController.ModefiedDraftLockStatus(System.String[],System.String,System.String,System.Int32)">
+            <summary>
+            汇票锁定状态修改
+            </summary>
+            <param name="Dids">汇票ID(数组)</param>
+            <param name="LockUserName">锁定人姓名</param>
+            <param name="LockUserLoginName">锁定人用户名</param>
+            <param name="IsLock">状态：1、锁定  0、释放</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.PaymentHelperController.ModefiedDraftInfo(System.String[],System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            汇票信息修改
+            </summary>
+            <param name="Dids">汇票ID(数组)</param>
+            <param name="OperateUserName">操作人姓名（出纳）</param>
+            <param name="OperateLoginUserName">操作人用户名（出纳）)</param>
+            <param name="ProjectCode">项目号(可以空)</param>
+            <param name="ProjectName">项目名称(可以空)</param>
+            <param name="PaymentReceivingCompanyName">收款单位名称</param>
+            <param name="PaymentReceivingCompanyCode">收款单位编号</param>
+            <param name="CasierClaimUserName">财务接单会计姓名</param>
+            <param name="CasierClaimLoginUserName">财务接单会计用户名</param>
+            <param name="AccountingAuditUserName">财务审核会计姓名</param>
+            <param name="AccountingAuditLoginUserName">财务审核会计用户名</param>
+            <param name="SubjectCode">入帐科目编号：录入发票-传成本科目，不传税额科目；不录入发票-借方预付科目</param>
+            <param name="SubjectName">入帐科目名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.PaymentHelperController.GetDraftInfo(System.String)">
+            <summary>
+            查询汇票信息进行修改
+            </summary>
+            <param name="ids">汇票ID (逗号隔开)</param>
+            <returns>查询结果返回</returns> 
+            <response code="201">DraftType:汇票种类,Status:票据状态（1取得（收款）、2开据、3退票、4背书（付款）、5托收、6贴现、7质押、8转应收）,StatusName:状态名称,DraftCode:汇票编号,DrawerDate:出票日期,DueDate:汇票到期日（设置提醒日期5天）,DueDay:付款期限,DrawerPlace:出票地,DrawerName:出票人全称,DrawerAccounts:出票人帐号,PutawayDate:入库日期,AcceptAgreementNumber:承兑协议编号,Drawee:付款人,PayingBankName:付款行全称,PayingBankNumber:付款行行号,PayingBankAddress:付款行地址,DraftAmount:汇票金额（小写）,DraftAmountChineseNumeral:汇票金额（大写）,DraftSource:汇票来源（1开据、2收款）,Currency:货币,ExchangeRate:汇率,Acceptor:承兑人,ProjectType:项目类型，１项目；２非项目,ProjectCode:项目代号,ProjectName:项目名称,ContractCode:合同代码,ContractName:合同名称,DepartName:收款人全称,PayeeName:收款人全称,PayeeAccounts:收款人帐号,PayeeBank:收款人开户行  ,PayeeCode:收款人编号,RecourseType:带追索权,SourceName:来源方全称,VoucherNumber:凭证号,CreationVoucherDate:生成凭证号,VoucherAbstract:凭证摘要,EndorseSupplier:背书供应商名称,EndorseSupplierCode:背书供应商名称,EndorseClientele:背书客户名称,EndorseAuditor:背书审核人,EndorseAuditorLoginUserName:背书审核人登陆名,Operator:操作人,OperateLoginUserName:操作人登陆名,SubmitDepartName:提交单位,SubmitDepartCode:提交单位,Submitter:提交人,SubmitLoginUserName:提效人登陆名,SubmitDate:提交时间,DiscountAmount:贴现金额,DiscountRate:贴现利率,DiscountCharges:贴率,IsPayment:是否付款 1付,2未付,IsLock:是否锁定,LockUserLoginName:锁定人登陆人,LockUserName:锁定人,CreatorUserLoginName:创建人用户名,CreatorUserName:创建人姓名,CreateDate:创建时间,LastStatusChangeDate:状态最后修改时间,FundsProjectCode:来源方项目编号,FundsProjectName:来源方项目名,SubjectCode:入帐凭证编号,EndorseOperator:背书人操作人,EndorseOperatorLoginName:背书人操作人登陆名,OperatorTime:操作人时间,PaymentTime:付款时间,PaymentOperator:付款操作人,PaymentOperatorLoginName:付款操作登陆人,OperateSubjectCode:操作科目编号,OperateSubjectName:操作科目名称,VOUCHERID:凭证main表主键,PaymentDepositRate:保证金比率,PaymentDepositSubjectCode:保证金科目,PaymentDepositSubjectName:保证金科目,PaymentSubjectCode:付款费用科目,PaymentSubjectName:付款费用科目,CollectionDate:托收日期,CollectionAmount:托收金额,CollectionSubjectCode:托收科目,CollectionSubjectName:托收科目a,DiscountBank:贴现银行,DiscountDay:贴现天数,DiscountDate:贴现日期,DiscountSubjectCode:贴现科目,DiscountSubjectName:贴现科目,PartBID:签定方,PartBName:签定方,DeleteModefier:删除人,DeleteDate:删除时间</response>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.PaymentHelperController.GetPaymentMarginInfo">
+            <summary>
+            提供已收回押金/保证金信息
+            </summary>
+            <returns>查询结果返回</returns> 
+            <response code="201">ProcessName:收款确认流程名称,Incident:收款确认流程实例号,AccountingTime:收款确认流程入账时间,Name:收款类型,SourceFormNumber:关联付款单号</response>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.RequestController.GetHistoryDatatofContanct(System.String)">
+            <summary>
+            获取合同的历史收费金额
+            </summary>
+            <param name="ContractCode">票号(合同编号) </param>
+            <returns>查询结果返回</returns> 
+            <response code="201">返回字符串（Al_Amount:合同已收费金额）</response>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.RequestController.GetProjectReceivablesInfoByDataTable(System.String)">
+            <summary>
+            获取项目收费信息
+            </summary>
+            <param name="ProjectCode">项目号 </param>
+            <returns>查询结果返回</returns> 
+            <response code="201">返回字符串（Total_OC:项目收款合同总额,RAmount_OC:已收费额,RPer_OC已收费百分比)）</response>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.RequestController.GetDepoitInfo(System.String,System.String,System.String,System.String)">
+            <summary>
+            收款流程的收押金保证金扣款代收发票信息
+            </summary>
+            <param name="LoginName">用户名 </param>
+            <param name="Currency">币种 </param>
+            <param name="DeptCode">部门编号 </param>
+            <param name="searchKey">查询条件(默认空，可选参数待定) </param>
+            <returns>查询结果返回</returns> 
+            <response code="201">返回字符串（rownumber:序号,ApplyLoginName:申请人用户名,ApplyRealName:申请人姓名,ExpenseTypeCode:付款用途编号,ExpenseTypeName:付款用途名称,PayInfo_FormNumber:流程表单号,PayInfo_ReceiveCpmpany:收款单位名称,PaymentReceivingCompanyCode:收款单位编号,FinancePaymentTotal:扣款接,Rate:汇率,FinanceChangeLocalCurrencyAmount:折人民币金额,IsSupplierOrCustomer:供应商1/客户2,FinanceCurrency:币种)）</response>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.SinglePoolController.FPInboxForCreate(System.Collections.Generic.List{TCC_CoreApi.Model.entity.LandrayCashierTaskFpInbox})">
+            <summary>
+            新增待办
+            </summary>
+            <param name="items">新增待办明细</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.SinglePoolController.FPInboxForModefied(System.Collections.Generic.List{TCC_CoreApi.Model.entity.LandrayCashierTaskFpInbox})">
+            <summary>
+            修改待办（变为已办）
+            </summary>
+            <param name="items">修改已办明细(Flag 0:流程中,1:已完成 ,2:已撤销)</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.SinglePoolController.FPInboxForAborted(System.String)">
+            <summary>
+            流程废弃
+            </summary>
+            <param name="fd_id">蓝凌主键fd_id</param>
+            <returns></returns>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.TrainController.GetTrainingInfo(System.String,System.String,System.String)">
+            <summary>
+            选择培训单据
+            </summary>
+            <param name="DeptCode">部门编号</param>
+            <param name="fd_id">蓝领外键（默认空）</param>
+            <param name="searchKey">检索条件（默认空：表单号、培训内容、申请人）</param>
+            <returns>查询结果返回</returns>
+            <response code="201">返回字符串-备注：{人力资源部可以看见所有}，返回字符串：{FormNumber:表单编号,ApplyName:申请人,ApplyDept:申请人部门,ApplyDate:申请日期,TotalCost:付款金额，TrainContent：培训内容，TrainTime：培训时间}</response>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.ValuesController.Queryborrowinfo">
+            <summary>
+            借款明细查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TCC_WebAPI.Controllers.ValuesController.QueryborrowinfoByID(System.String,System.String,System.String)">
+            <summary>
+            通过条件查询借款信息（包含备用金与周转金）
+            </summary>
+            <param name="ID"></param>
+            <param name="Currency"></param>
+            <param name="ProjectCode"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

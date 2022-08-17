@@ -1,0 +1,9 @@
+D:\天辰源码\WebapiServ\ultimus-webapiserv\TCC_CoreApi.Common\bin\Release\netcoreapp3.1\TCC_CoreApi.Common.deps.json
+D:\天辰源码\WebapiServ\ultimus-webapiserv\TCC_CoreApi.Common\bin\Release\netcoreapp3.1\TCC_CoreApi.Common.dll
+D:\天辰源码\WebapiServ\ultimus-webapiserv\TCC_CoreApi.Common\bin\Release\netcoreapp3.1\TCC_CoreApi.Common.pdb
+D:\天辰源码\WebapiServ\ultimus-webapiserv\TCC_CoreApi.Common\obj\Release\netcoreapp3.1\TCC_CoreApi.Common.csprojAssemblyReference.cache
+D:\天辰源码\WebapiServ\ultimus-webapiserv\TCC_CoreApi.Common\obj\Release\netcoreapp3.1\TCC_CoreApi.Common.AssemblyInfoInputs.cache
+D:\天辰源码\WebapiServ\ultimus-webapiserv\TCC_CoreApi.Common\obj\Release\netcoreapp3.1\TCC_CoreApi.Common.AssemblyInfo.cs
+D:\天辰源码\WebapiServ\ultimus-webapiserv\TCC_CoreApi.Common\obj\Release\netcoreapp3.1\TCC_CoreApi.Common.csproj.CoreCompileInputs.cache
+D:\天辰源码\WebapiServ\ultimus-webapiserv\TCC_CoreApi.Common\obj\Release\netcoreapp3.1\TCC_CoreApi.Common.dll
+D:\天辰源码\WebapiServ\ultimus-webapiserv\TCC_CoreApi.Common\obj\Release\netcoreapp3.1\TCC_CoreApi.Common.pdb
